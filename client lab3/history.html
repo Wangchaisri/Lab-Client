@@ -1,0 +1,84 @@
+<html>
+<head>
+<title>History</title>
+<link rel="stylesheet" href="style.css">
+ <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+   <script>
+     $(() => {
+         $("#b1").click(() => {
+             $("#id2").hide(2000);
+             $("#id2").show('normal');
+             $("#id3").hide(2000);
+             $("#id3").show('normal');  // slow, normal, fast
+         });
+     });
+
+     $(() => {
+         $("#b2").click(() => {
+             $("#id3").toggle('slow', function() {
+                 var test = $(this).css('display');
+                 if (test == 'none')
+                     alert('hide');
+                 else
+                     alert('show')
+             })
+         });
+     });
+
+ </script>
+
+</head>
+<body>
+
+<!-- First Container -->
+<div class="container-fluid bg-1 ">
+  <center><h3 class="margin">► Welcome to My Profile ◄</h3>
+  <img src="1.jpg" class="img-responsive img-circle margin" style="display:inline" alt="google.com" width="350" height="350">
+  <p><table border="10" align="center" width="50%">
+  <tr>
+    <th >ID:</th>
+    <td >5735512037</td>
+  </tr>
+  <tr>
+    <th>Name:</th>
+    <td>Patitta Noojan</td>
+  </tr>
+  <tr>
+    <th>Date Of birth :</th>
+    <td>22 Feb 1996</td>
+  </tr>
+ 
+</table></p></center>
+ <br><h3>semester client </h3>
+
+<ul>
+  <li>chapter1: Introduction</li>
+  <li>chapter2: Client server computing</li>
+  <li>chapter3: Peer to Peer network
+  <li>chapter4: Socket Programming</li>
+</ul>
+
+<br></div>
+
+
+
+
+ <!-- Footer -->
+<footer class="container-fluid bg-2 text-center">
+  <p id="id1" align="center"> Subject: Distributed computing and web technologies</p>
+<p id="id2" align="center"> Semester 2/2561</p>
+<p id="id3" align="center"> Webpage by 5735512037</p>
+<button id="b1" align="center" style="color: black"> Show/Hide </button>
+<button id="b2" align="center" style="color: black"> Toggle </button>
+</footer>
+
+
+</body>
+</html>
+
