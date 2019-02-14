@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  
+   <style>
+p.italic {
+  font-style: italic;
+}
+p {
+  color: blue;
+}
+h1 {
+  color: pink;
+}
+
+body {
+  background-image: url("bg.jpg");
+ /* background-repeat: no-repeat; */
+}
+</style>
+
+<script>
+     $(function ()  {
+         $("#b1").click( function () {
+             $("#id3").hide(2000);
+             $("#id3").show('normal');  // slow, normal, fast
+         });
+     });
+
+     $(function ()  {
+         $("#b2").click( function () {
+             $("#id4").toggle('slow', function() {
+                 var test = $(this).css('display');
+                 if (test == 'none')
+                     alert('hide');
+                 else
+                     alert('show')
+             })
+         });
+     });
+
+ </script>
+</head>
+<body>
+
+<div class="jumbotron text-center">
+  <a href = "www.facebook.com"> <img src= "benz.jpg" width = "150" height = "200"></a>
+  <h3>Amornrat Wangchaisri</h> 
+  <p>5735512123</p> 
+</div>
+  
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <table class="table table-bordered" >
+    <thead>
+      <tr>
+         <th>Favorite subject</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><ul>
+    <li>Client</li>
+    <li>Operating System</li>
+    <li>Intro to computer</li>
+    </ul>
+      </tr>
+    </tbody>
+  </table>
+    </div>
+    <div class="col-sm-4">
+      <p id="id1"> I like coconut juice</p>
+<p id="id2"> I love cats and dogs</p>
+<p id="id3"> My Favorite sport is badminton </p>
+<p id="id4"> I like novew</p>
+
+<button id="b1"> Show/Hide </button>
+<button id="b2"> Toggle </button>
+    </div>
+  
+  
+
+</body>
+</html>
